@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+Http协议:超文本传输协议
+超链接,提交表单都是属于http请求
+一次请求中包含:请求头`请求行`请求体(表单post提交数据)
+-->
+<!--
+目前将http请求分为:
+get:主要从古武器获取数据,也可以向服务器发送数据,数据在地址中传递,会在地址栏中显示
+    超链接
+    在浏览器地址栏中直接输入地址访问
+    js  window.open(url)
+        location.assign(url)
+        location.replace(url)
+    表单:method="get"
+post:向服务器发送数据,提交数据在请求体发送,长度没有限制,数据在请求中相对安全
+    表单:method="post"
+-->
+<a href="login?name=111&age=11">访问</a><br>
+<form action="login" method="post">
+    账号:<input type="text" name="acount"><br>
+
+    密码:<input type="password" name="password"><br>
+
+    性别:<input type="radio" name="sex" value="女">女
+    <input type="radio" name="sex" value="男">男<br>
+
+    职业:<select name="work">
+    <option value="java工程师" >java工程师</option>
+    <option value="C++工程师" >C++工程师</option>
+    <option value="Python工程师" >Python工程师</option>
+</select><br>
+
+    课程:<input type="checkbox" value="java" name="course">java
+    <input type="checkbox" value="c" name="course">c
+    <input type="checkbox" value="python" name="course">python<br>
+    <input type="submit" value="提交">
+</form>
+</body>
+</html>
